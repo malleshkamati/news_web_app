@@ -15,6 +15,9 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
+
+nltk.download('all')
+
 #from collections import Counter
 
 conn = psycopg2.connect(host='dpg-cnmoa8acn0vc738f6ur0-a', database='kamati', user='mallesh', password='d9dgVZDaFuQVRHea8wxgK2eZuKzvvs3E')
