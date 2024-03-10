@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form method="POST">
+		<label>Name</label>
+		<input type="text" name="Name" placeholder="enter your name"></br>
+		<label>Email</label>
+		<input type="email" name="Email" placeholder="enter email address"></br>
+		<label>Phone</label>
+		<input type="text" name="Phone" placeholder="Phone"></br>
+		<label>Country</label>
+		<input type="text" name="country" placeholder="country"></br>
+		<label>Password</label>
+		<input type="password" name="Password" placeholder="password"></br>
+		<input type="submit" value="Submit">
+	</form>
+	<form action="/view_data2" method="post">
+        <label>To view all data enter password</label><br>
+        <input  name="Password" type="password">
+        <input type="submit" value="view data"></form>
+
+	
+	
+	<!-- <table class="out_put Table">
+        <tr>
+            <th>name</th>
+            
+			<th> Country</th>
+            <th>Phone_no</th>
+			<th>email_id</th>
+			<th></th>
+        </tr>
+        {% for row in data %}
+        	<tr>
+            	<td> {{ row[0] }} </td>
+            	<td> {{ row[1] }} </td>
+            	<td> {{ row[2] }} </td>
+				<td> {{ row[3] }} </td>
+        	</tr>
+        {% endfor %}
+    </table> -->
+</body>
+</html>

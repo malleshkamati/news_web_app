@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIAN EXPRESS NEWS ANALYSER</title>
+    <link rel="stylesheet" href="../static1/newsapp.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='alldata.css') }}"> -->
+
+</head>
+<body>
+    
+    <div class="nav">
+        <p><img src="logo.png.png" alt="PURE IE" width="50px" height="50px"></p>
+    
+    
+    
+        
+        <a href="contactus.html" style="margin-top: 10px;">Contact</a>
+        <!-- <form action="{{ url_for('signin') }}">
+            <button class="login-button">Login</button>
+        </form></li> -->
+        <form action="{{ url_for('view_data') }}">
+            <button class="login-button">view_data</button>
+        </form></li>
+    </ul>
+    </div>
+
+    <!-- Your page content goes here -->
+
+
+    <!-- Login button -->
+    
+    <form method="post" class="Box11">
+        <label for="myTextarea">Enter URL</label><br>
+        <input type="text" name="enter_url"><br>
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+    
+    <div class="whole_box">
+        <div method="post" class="big_box">
+            Entered URL: {{ data[0] }}<br>
+           <p class="title1"> {{ data[1] }}</p>
+            Publish Details: {{ data[2] }}<br>
+            News Text: {{ data[3] }}<br>
+            <!-- Add other data points as needed -->
+        </div>
+        <div class="half_box">
+        <!-- Second data box -->
+        <div method="post" class="box2">
+            
+            Number of Sentences: {{ data[4] }}<br>
+            Number of Stopwords: {{ data[5] }}<br>
+            <!-- Add other data points as needed -->
+        </div>
+
+        <!-- Third data box -->
+        <div method="post" class="box3">
+            UPOS Tag Count: {{ data[6] }}<br>
+            <a href="{{ data[7] }}" target="_blank" rel="noopener noreferrer">Image Link</a><br>
+            {{ data[8] }}
+            <!-- Add other data points as needed -->
+            Time to read:{{data[9]}}min
+        </div>
+    </div>
+    </div>
+
+
+      
+</body>
+</html>

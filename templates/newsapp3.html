@@ -1,0 +1,82 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIAN EXPRESS NEWS ANALYSER</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='newsapp.css') }}"> -->
+    <link rel="stylesheet" href="../static1/newsapp.css">
+
+</head>
+<body>
+    <ul>
+    </ul>
+    <div class="nav">
+    <p style="margin-left: 35px;"><img src="../static1/images/logo.png" alt="PURE IE" width="85px" height="78px" ></p>
+    
+    
+
+
+    
+        
+        <a href="contactus.html" style="margin-left: 700px;">About Us</a>
+        <!-- <form action="{{ url_for('signin') }}">
+            <button class="login-button">Login</button>
+        </form> -->
+        <button class="login-button"><a href="{{ url_for('github_login') }}" class="login-button">Login with GitHub</a></button>
+        </li>
+    </ul>
+    </div>
+
+    <!-- Your page content goes here -->
+
+
+    <!-- Login button -->
+    
+    <form method="post" class="Box11">
+        <label for="myTextarea">Enter URL</label><br><br>
+        <input type="text" name="enter_url" placeholder="Enter URL OF Indian Express news article"><br>
+        <button type="submit" value="Submit" class="Submit-button">Submit</button>
+    </form>
+    
+    <div class="whole_box">
+        <div method="post" class="big_box">
+          <p class="url">Entered URL:{{ data[0] }} </p>
+           <p class="title1"> {{ data[1] }}</p><br>
+            {{data[9]}} min Read<br>
+
+            Sentiment :{{ data[2] }}<br><br><br>
+            News Text: {{ data[3] }}<br><br>
+            <a href="{{ data[7] }}" target="_blank" rel="noopener noreferrer">Image Link</a><br>
+
+
+
+            <!-- Add other data points as needed -->
+        </div>
+        <div class="half_box">
+        <!-- Second data box -->
+        <div method="post" class="box2">
+            
+            Number of Sentences: {{ data[4] }}<br>
+            Number of Stopwords: {{ data[5] }}<br>
+            UPOS Tag Count: {{ data[6] }}<br>
+            <!-- Add other data points as needed -->
+        </div>
+
+        <!-- Third data box -->
+        <div method="post" class="box3">
+           
+            <a href="{{ data[7] }}" target="_blank" rel="noopener noreferrer">Image Link</a><br><br>
+             Sentiment:{{ data[8] }}<br><br>
+            <!-- Add other data points as needed -->
+            Time to read:{{data[9]}}min
+        </div>
+    </div>
+    </div>
+
+
+      
+</body>
+</html>

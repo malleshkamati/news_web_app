@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEW data</title>
+    
+<link rel="stylesheet" href="../static1/view_data.css">
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Title</th>
+                <th>Sentiment</th>
+                <th>News Text</th>
+                <th>Number of Sentences</th>
+                <th>Number of Stopwords</th>
+                <th>Number of UPOS Tags</th>
+                <th>Image Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- This part will be dynamically populated with data from the database -->
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0]}}</td>
+                    <td>{{ row[1]}}</td>
+                    <td>{{ row[2]}}</td>
+                    <td>{{ row[3]}}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

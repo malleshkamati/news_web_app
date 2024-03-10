@@ -1,0 +1,132 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #6fb3b8;
+    margin: 0;
+}
+.nav{
+    padding: 4px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 2px solid black;
+}
+.nav a{
+    /* margin-top: 4px; */
+    color:white;
+    font-size:20px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 20px;
+
+}
+.nav a:hover{
+    color:orange;
+}
+
+button{
+    background-color: green;
+    color: white;
+    width: auto;
+    height: 30px;
+    padding: 4px;
+    /* margin:10px; */
+    /* color:#fff; */
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top:40px;
+}
+a.login-button{
+    color:rgb(244, 229, 229);
+    /* margin-top: 4px; */
+    padding-bottom: 5px;
+    font-size: 15px;
+    margin-top:2px;
+}
+.p{
+    font-size: 35px;
+    font-weight:600;
+}
+
+form {
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 20px;/* Add some space between the form and the boxes */
+} 
+
+input[type="text"] {
+    width: 80%; 
+    margin-left: 20px;
+    padding:10px;
+}
+
+input[type="submit"] {
+    margin-left: 20px; /* Add some space between the input and the submit button */
+    align-items: center;
+}
+.sub{
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    color:white;
+    /* background-color: blue; */
+}
+
+.whole_box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 auto; /* Center the boxes */
+    width: 80%; /* Set the width of the whole box */
+    
+    
+}
+.half_box{
+    flex-direction: column;
+
+}
+
+.big_box {
+    width: 80%; /* Set the width of the big box to cover 80% of the screen */
+    height: auto;
+    background-color:whitesmoke;
+    margin-right: 20px; /* Add some space between the big box and the other boxes */
+    padding:20px;
+}
+
+
+.box2, .box3 {
+    width: 200px; /* Set the width of box2 and box3 to 200px */
+    height: 200px; /* Set the height of box2 and box3 to 200px */
+    background-color: rgb(180, 245, 245);
+    margin-bottom: 20px; /* Add some space between box2 and box3 */
+    margin-left: 20px;
+    padding: 10px;
+    
+}
+
+.Box11{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.login-button {
+    float: right; /* Align the login button to the right */
+    margin:10px;
+    margin-top: 25px;
+
+}
+.title1{
+font-family: 'Droid Serif',serif;
+font-size: 30px;
+}
+form.url{
+    font-size: 20px;
+    text-align: center;
+}
+.Submit-button{
+    width: 100px;
+    height: auto;
+    margin-top: 25px;
+}
