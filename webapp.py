@@ -17,14 +17,14 @@ import re
 
 #from collections import Counter
 
-conn = psycopg2.connect(host='localhost', database='dhp2024', user='postgres', password='Mallesh@123')
+conn = psycopg2.connect(host='dpg-cnmoa8acn0vc738f6ur0-a', database='kamati', user='mallesh', password='d9dgVZDaFuQVRHea8wxgK2eZuKzvvs3E')
 cur = conn.cursor()
 app = Flask(__name__, static_folder="static1")
 
 oauth = OAuth(app)
 
 # github
-app.config['SECRET_KEY'] = "THIS SHOULD BE SECRET"
+app.config['SECRET_KEY'] = "THIS is mine"
 app.config['GITHUB_CLIENT_ID'] = "67ac24f4cce98e657f28"
 app.config['GITHUB_CLIENT_SECRET'] = "91fc031922079eb0b928d6e13dfef81a484e299e"
 
