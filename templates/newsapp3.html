@@ -43,11 +43,11 @@
     
     <div class="whole_box">
         <div method="post" class="big_box">
-          <p class="url">Entered URL:{{ data[0] }} </p>
+          <p class="url">Entered URL: {{ data[0] }} </p>
            <p class="title1"> {{ data[1] }}</p><br>
             {{data[9]}} min Read<br>
 
-            Sentiment :{{ data[2] }}<br><br><br>
+            Sentiment : {{ data[2] }}<br><br><br>
             News Text: {{ data[3] }}<br><br>
             <a href="{{ data[7] }}" target="_blank" rel="noopener noreferrer">Image Link</a><br>
 
@@ -71,7 +71,10 @@
             <a href="{{ data[7] }}" target="_blank" rel="noopener noreferrer">Image Link</a><br><br>
              Sentiment:{{ data[8] }}<br><br>
             <!-- Add other data points as needed -->
-            Time to read:{{data[9]}}min
+            Time to read: {{data[9]}}min<br><br>
+            Number of words: {{ data[10] }}
+            
+            
         </div>
     </div>
     </div>
