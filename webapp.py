@@ -315,6 +315,10 @@ def newsapp3():
 def render_newsapp3():
     return render_template('newsapp3.html')
 
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html')
+
 
 
 
