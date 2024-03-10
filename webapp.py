@@ -195,8 +195,8 @@ def portal():
             cur.execute('INSERT INTO news_table (url,title,sentiment,news_text,number_of_sentences,number_of_stopwords,number_of_upos_tags,image_link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)', (enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link_str))
             conn.commit()
 
-            #data = enter_url, sent, stop_words, upos1, clean_text, title1,link 
-            data=enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link,sentiment,time1
+            
+            data=enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link,sentiment,time1,word
 
     except Exception as e:
          #Handle exceptions and log or display an error message
