@@ -97,17 +97,21 @@ def calculate_reading_time(text, words_per_minute=200):
 # conn=psycopg2.connect(host='localhost',database='dhp2024',user='postgres',password='Mallesh@123')
 # cur=conn.cursor()
 
-# CREATE TABLE IF NOT EXISTS news_table (
-#     id SERIAL PRIMARY KEY,
-#     url VARCHAR(80000),
-#     title VARCHAR(500),
-#     sentiment VARCHAR(500),
-#     news_text VARCHAR(100000),
-#     number_of_sentences INTEGER,
-#     number_of_stopwords INTEGER,
-#     number_of_upos_tags VARCHAR(10000),
-#     image_link VARCHAR(255)
-# );
+cur.execute('''
+    CREATE TABLE IF NOT EXISTS news_table (
+        id SERIAL PRIMARY KEY,
+        url VARCHAR(80000),
+        title VARCHAR(500),
+        sentiment VARCHAR(500),
+        news_text VARCHAR(100000),
+        number_of_sentences INTEGER,
+        number_of_stopwords INTEGER,
+        number_of_upos_tags VARCHAR(10000),
+        image_link VARCHAR(255)
+    );
+''')
+conn.commit()
+
 
 
 
