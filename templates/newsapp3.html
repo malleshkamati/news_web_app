@@ -40,6 +40,18 @@
         <input type="text" name="enter_url" placeholder="Enter URL OF Indian Express news article"><br>
         <button type="submit" value="Submit" class="Submit-button">Submit</button>
     </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+       {% if messages %}
+         <div class="alert alert-danger">
+           {% for category, message in messages %}
+             {{ message }}
+           {% endfor %}
+         </div>
+       {% endif %}
+     {% endwith %}
+     
+     <p style="color: red;">Please enter the URL of an Indian Express news article</p>
+
     
     <div class="whole_box">
         <div method="post" class="big_box">
