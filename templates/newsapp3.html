@@ -44,13 +44,14 @@
        {% if messages %}
          <div class="alert alert-danger">
            {% for category, message in messages %}
-             {{ message }}
+               {{ message }} 
+               <p style="color: red;">Please enter the URL of an Indian Express news article</p>
            {% endfor %}
          </div>
        {% endif %}
      {% endwith %}
      
-     <p style="color: red;">Please enter the URL of an Indian Express news article</p>
+    
 
     
     <div class="whole_box">
