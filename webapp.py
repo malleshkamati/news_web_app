@@ -200,7 +200,9 @@ def portal():
 
     except Exception as e:
          #Handle exceptions and log or display an error message
-         print(f"An error occurred: {str(e)}")
+         # print(f"An error occurred: {str(e)}")
+           flash(f"An error occurred: {str(e)}", 'error')
+
 
     return render_template("newsapp3.html", data=data)
 
