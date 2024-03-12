@@ -98,7 +98,7 @@ def calculate_reading_time(text, words_per_minute=200):
 # cur=conn.cursor()
 
 cur.execute('''
-    CREATE TABLE IF NOT EXISTS news_table (
+    CREATE TABLE IF NOT EXISTS news_table11111 (
        
         url VARCHAR(80000),
         title VARCHAR(500),
@@ -192,7 +192,7 @@ def portal():
             # publish_dt=publish_details(results)
 
                 # Inserting data into the database
-            cur.execute('INSERT INTO news_table (url,title,sentiment,news_text,number_of_sentences,number_of_stopwords,number_of_upos_tags,image_link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)', (enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link_str))
+            cur.execute('INSERT INTO news_table11111 (url,title,sentiment,news_text,number_of_sentences,number_of_stopwords,number_of_upos_tags,image_link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)', (enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link_str))
             conn.commit()
 
             
@@ -294,7 +294,7 @@ def admin():
             #publish_dt=publish_details(results)
 
                 # Inserting data into the database
-            cur.execute('INSERT INTO news_table (url,title,sentiment,news_text,number_of_sentences,number_of_stopwords,number_of_upos_tags,image_link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)', (enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link_str))
+            cur.execute('INSERT INTO news_table11111 (url,title,sentiment,news_text,number_of_sentences,number_of_stopwords,number_of_upos_tags,image_link) VALUES (%s, %s,%s,%s,%s,%s,%s,%s)', (enter_url,title1,sentiment,clean_text,sent,stop_words,upos1,link_str))
             conn.commit()
 
             #data = enter_url, sent, stop_words, upos1, clean_text, title1,link 
@@ -327,7 +327,7 @@ def contactus():
 @app.route("/view_data", methods=["GET","POST"])
 def view_data():
     try:
-        cur.execute('select * from news_table')
+        cur.execute('select * from news_table11111')
         data = cur.fetchall()
         return render_template("view_data.html", data=data)
     except Exception as e:
@@ -349,7 +349,7 @@ def index():
         
         logged_in_username = resp.get('login')
         if logged_in_username in github_admin_usernames:
-            cur.execute('select  * from news_table')
+            cur.execute('select  * from news_table11111')
             data = cur.fetchall()
             
             return render_template("newsapp3.html", data=data)
