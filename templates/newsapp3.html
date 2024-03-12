@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="../static1/newsapp.css">
 
 </head>
-<body>
-    <ul>
-    </ul>
-    <div class="nav">
-    <p style="margin-left: 35px;"><img src="../static1/images/logo.png" alt="PURE IE" width="85px" height="78px" ></p>
-    
+<body style="background-color:rgb(149 180 180);">
+    <div class="nav" style="background-color: aquamarine;">
+    <p style="margin-left: 35px;"><img src="../static1/images/logo.png" alt="PURE IE" width="60px" height="60px" >
+    </p>
+    <strong style="font-family: cursive; font-size:3rem;margin-bottom:5px;margin-right: 100px;">PURE IE</strong>
     
 
-
-    
              <a href="{{ url_for('contactus') }}" style="margin-left: 700px;">About Us</a>
 <!--         <a href="contactus.html" style="margin-left: 700px;">About Us</a> -->
         <!-- <form action="{{ url_for('signin') }}">
@@ -45,7 +42,7 @@
          <div class="alert alert-danger">
            {% for category, message in messages %}
                {{ message }} 
-               <p style="color: red;">Please enter the URL of an Indian Express news article</p>
+               <p style="color: red;text-align: center;">Please enter the URL of an Indian Express news article</p>
            {% endfor %}
          </div>
        {% endif %}
