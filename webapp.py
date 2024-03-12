@@ -99,7 +99,7 @@ def calculate_reading_time(text, words_per_minute=200):
 
 cur.execute('''
     CREATE TABLE IF NOT EXISTS news_table (
-        id SERIAL PRIMARY KEY,
+       
         url VARCHAR(80000),
         title VARCHAR(500),
         sentiment VARCHAR(500),
